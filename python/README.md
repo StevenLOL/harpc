@@ -17,6 +17,20 @@ service TutorialService {
     string echo(1:string str)
 }
 ```
+Types in thrift:
+
+```
+bool： 
+byte： 
+i16: int 16 
+i32: int 32 
+i64: int 64 
+double:    python float
+string：   pyton str
+
+#list:
+list<list<double>>
+```
 
 (2)thrift --gen py tutorial.thrift
 
