@@ -52,7 +52,7 @@ class ServerBase(object):
         self._server = None
         self._service_name = config.get(self._section_name, "service", required=True)
         self._port = config.getint(self._section_name, "port", required=True)
-        self._ip = config.get(self._section_name, "ip", required=True)
+        self._ip = config.get(self._section_name, "ip", required=False,default="0.0.0.0")
         self._zk_connect_str = config.get(self._section_name, "zk_connect_str", required=True)
         self._auth_user = config.get(self._section_name, "auth_user", required=True)
         self._auth_password = config.get(self._section_name, "auth_password", required=True)
